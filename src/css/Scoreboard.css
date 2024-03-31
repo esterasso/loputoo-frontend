@@ -1,0 +1,38 @@
+.scoreboard {
+    width: 450px;
+    height: 360px;
+    background-color: #794d4d;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    text-align: center;
+    font-size: 26px;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px; /* Adjust as needed */
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+}
+
+.return-button {
+    position: absolute;
+    left: 50%;
+}
+
+.user-row {
+    /* Add styles for each user row */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Adjust as needed */
+    padding: 10px;
+}

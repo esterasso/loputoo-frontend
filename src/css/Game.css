@@ -1,0 +1,90 @@
+.container {
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    justify-content: space-between; /* switched from default (flex-start, see below) */
+    font-size: 1.5vw;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.anagrammimang {
+    float: left;
+    width: 25%;
+    text-align: left;
+}
+
+.points-n {
+    width: 50%;
+    text-align: center;
+}
+
+.timer {
+    float: right;
+    width: 25%;
+    text-align: right;
+}
+
+
+.word {
+    text-align: center;
+    margin: 5%;
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+}
+
+.input {text-align: center;}
+
+.input-box {
+    width: 25%;
+    height: 100px;
+    border-radius: 15px;
+}
+
+.sisesta-button-na {
+    height: 40px;
+    width: 100px;
+    font-family: Arial, serif;
+    font-size: 16px;
+    color: #000000;
+    background: #ffffff;
+    border-color: #000000;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.sisesta-button-n {
+    height: 40px;
+    width: 100px;
+    font-family: Arial, serif;
+    font-size: 16px;
+    color: #000000;
+    background: #ffffff;
+    border-color: #000000;
+    border-radius: 15px;
+
+    margin: 0;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.return-button {
+    height: 35px;
+    width: 150px;
+    font-family: Arial, serif;
+    font-size: 18px;
+    color: #000000;
+    background: #ffffff;
+    border-color: #ffffff;
+    border-radius: 15px;
+
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
