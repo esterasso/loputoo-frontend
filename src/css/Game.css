@@ -1,9 +1,8 @@
 .container {
-    display: flex;                  /* establish flex container */
-    flex-direction: row;            /* default value; can be omitted */
-    flex-wrap: nowrap;              /* default value; can be omitted */
-    justify-content: space-between; /* switched from default (flex-start, see below) */
-    font-size: 1.5vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     margin-left: 30px;
     margin-right: 30px;
 }
@@ -41,29 +40,18 @@
     border-radius: 15px;
 }
 
-.sisesta-button-na {
+.sisesta-button-na, .sisesta-button-n, .return-button {
     height: 40px;
-    width: 100px;
-    font-family: Arial, serif;
+    width: 120px;
     font-size: 16px;
     color: #000000;
-    background: #ffffff;
+    background: #E6DDFF;
     border-color: #000000;
     border-radius: 15px;
     margin-top: 10px;
 }
 
 .sisesta-button-n {
-    height: 40px;
-    width: 100px;
-    font-family: Arial, serif;
-    font-size: 16px;
-    color: #000000;
-    background: #ffffff;
-    border-color: #000000;
-    border-radius: 15px;
-
-    margin: 0;
     position: absolute;
     top: 70%;
     left: 50%;
@@ -72,19 +60,22 @@
 }
 
 .return-button {
-    height: 35px;
-    width: 150px;
-    font-family: Arial, serif;
-    font-size: 18px;
-    color: #000000;
-    background: #ffffff;
-    border-color: #ffffff;
-    border-radius: 15px;
-
     margin: 0;
     position: absolute;
     top: 90%;
     left: 10%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.game-over-dialogue {
+    width:80%;
+    max-width: 400px;
+    background: #b7a8ea;
+    padding: 20px;
+    border: 3px solid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position:absolute;
 }

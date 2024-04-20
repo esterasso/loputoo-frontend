@@ -19,14 +19,6 @@ function Game() {
     const navigate = useNavigate();
     const [nameError, setNameError] = useState('');
 
-    const dialogStyle = {
-        background: '#b7a8ea',
-        marginTop: '20px',
-        marginLeft: '30%',
-        marginRight: '30%',
-        padding: '20px',
-        border: '3px solid'
-    };
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
     };
@@ -85,7 +77,7 @@ function Game() {
             const intervalId = setInterval(() => {
                 setTimer(prevTimer => {
                     if (prevTimer > 0) {
-                        return prevTimer - 1;
+                        return prevTimer - 15;
                     } else {
                         clearInterval(intervalId);
                         showGameOverPopup();
@@ -154,10 +146,10 @@ function Game() {
     return (
         <div>
             <div className="container">
-                <h3 className="anagrammimang">Anagrammimäng</h3>
-                <h3 className="points-n">{points} p</h3>
-                <h3 className="difficulty">{location.state.difficulty}</h3>
-                <h3 className="timer">{timer} sec</h3>
+                <h3>Anagrammimäng</h3>
+                <h3>{points} p</h3>
+                <h3>{location.state.difficulty}</h3>
+                <h3>{timer} sec</h3>
             </div>
 
             <p className="word">{word || "Loading..."}</p>
@@ -175,7 +167,7 @@ function Game() {
                 header="Mäng läbi"
                 visible={gameOverVisible}
                 onHide={hideGameOverPopup}
-                style={dialogStyle}
+                className="game-over-dialogue"
             >
                 <p>Sinu mäng on lõppenud. Sisesta võistleja nimi:</p>
 
@@ -185,7 +177,7 @@ function Game() {
                         <Message severity="error" text={nameError}/>
                     </div>
                 </div>
-                <Button className="sisesta-button-na" label="Submit" onClick={handleCompetitorNameSubmit}/>
+                <Button className="sisesta-button-na" label="Sisesta" onClick={handleCompetitorNameSubmit}/>
             </Dialog>
             <Button onClick={sendInput} label="Sisesta" className="sisesta-button-n"/>
             <StartOverButton/>

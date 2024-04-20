@@ -85,7 +85,7 @@ const Homepage = () => {
                 <button className="button-edetabel" onClick={handleEdetabelButtonClick}>
                     Edetabel
                 </button>
-                <button className="button-edetabel1" onClick={handleEdetabelButtonClick}>
+                <button className="button-info" onClick={handleEdetabelButtonClick}>
                     Info
                 </button>
             </div>
