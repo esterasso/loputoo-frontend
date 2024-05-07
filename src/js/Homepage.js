@@ -32,6 +32,10 @@ const Homepage = () => {
         navigate('/scoreboard');
     };
 
+    const handleInstructionsButtonClick = () => {
+        navigate('/instructions');
+    };
+
     return (
         <div>
             <div className="purple-area">
@@ -85,8 +89,8 @@ const Homepage = () => {
                 <button className="button-edetabel" onClick={handleEdetabelButtonClick}>
                     Edetabel
                 </button>
-                <button className="button-info" onClick={handleEdetabelButtonClick}>
-                    Info
+                <button className="button-info" onClick={handleInstructionsButtonClick}>
+                    Mängujuhend
                 </button>
             </div>
         </div>
