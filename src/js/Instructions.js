@@ -1,6 +1,5 @@
 import React from 'react';
 import '../css/Instructions.css'
-import {Button} from "primereact/button";
 import StartOverButton from "../components/StartOverButton";
 
 const Instructions = () => {

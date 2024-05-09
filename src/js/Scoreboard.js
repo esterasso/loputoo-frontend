@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from "primereact/button";
-import { useLocation, useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../config';
 import '../css/Scoreboard.css';
 import StartOverButton from "../components/StartOverButton";
@@ -10,7 +9,6 @@ function Scoreboard() {
     const [filteredUsers, setFilteredUsers] = useState([]);
     const [activeTimeFilter, setActiveTimeFilter] = useState(null);
     const [activeModeFilter, setActiveModeFilter] = useState(null);
-    const navigate = useNavigate();
 
 
     const filterByGameModeAndTime = (mode, time) => {
