@@ -3,7 +3,7 @@
     width: 480px;
     background-color: #b7a8ea;
     position: relative;
-    margin: 25% auto;
+    margin: 5% auto;
     border-radius: 15px;
     text-align: center;
     font-size: 26px;
@@ -48,6 +48,13 @@ th, td {
     .scoreboard-container {
         padding: 0 5px;
     }
+    table {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 8px 10px;
+    }
+
 }
 
 .filter-buttons {
@@ -59,4 +66,9 @@ th, td {
     border-color: #000000;
     border-radius: 15px;
     margin-top: 10px;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
 }

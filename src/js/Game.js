@@ -7,6 +7,8 @@ import {Message} from "primereact/message";
 import {Dialog} from 'primereact/dialog';
 import {useNavigate} from 'react-router-dom';
 import {BASE_URL} from '../config';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRedo } from '@fortawesome/free-solid-svg-icons';
 
 function Game() {
     const [word, setWord] = useState('');
@@ -23,6 +25,12 @@ function Game() {
         setInputValue(e.target.value);
     };
 
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            sendInput()
+        }
+    }
+
     const showGameOverPopup = () => {
         setGameOverVisible(true);
     };
@@ -31,6 +39,7 @@ function Game() {
         const username = document.querySelector('.input-box-name').value;
         const score = points;
         const gameMode = location.state.difficulty;
+        const time = parseInt(location.state.time);
 
         if (username.trim() === '') {
             setNameError('Nimi ei saa olla tühi.');
@@ -44,10 +53,11 @@ function Game() {
                 body: JSON.stringify({
                     username,
                     score,
-                    gameMode
+                    gameMode,
+                    time
                 }),
             })
-                .then(response => {
+                .then(e => {
                     navigate('/scoreBoard');
                 })
                 .catch(error => {
@@ -77,7 +87,7 @@ function Game() {
             const intervalId = setInterval(() => {
                 setTimer(prevTimer => {
                     if (prevTimer > 0) {
-                        return prevTimer - 15;
+                        return prevTimer - 1;
                     } else {
                         clearInterval(intervalId);
                         showGameOverPopup();
@@ -98,7 +108,7 @@ function Game() {
             .catch((error) => {
                 console.error('Error fetching data:', error);
             });
-    }, []);
+    }, [location.state.difficulty]);
 
     const sendInput = () => {
         const input = document.querySelector('.input-box');
@@ -152,14 +162,21 @@ function Game() {
                 <h3>{timer} sec</h3>
             </div>
 
-            <p className="word">{word || "Loading..."}</p>
+            <div className="container-word">
+                <p className="word">{word || "Loading..."}</p>
+                <button className="circle-button" onClick={fetchNewWord}>
+                    <FontAwesomeIcon icon={faRedo} />
+                </button>
+            </div>
 
             <input
                 type="text"
-                className="input-box"
+                className="form-control input-box"
                 value={inputValue}
+                onKeyUp={handleKeyPress}
                 onChange={handleInputChange}
             />
+
             <div className="error-msg" style={{display: showError ? 'block' : 'none'}}>
                 <Message severity="warn" text="Vale vastus, proovi uuesti"/>
             </div>
@@ -169,7 +186,7 @@ function Game() {
                 onHide={hideGameOverPopup}
                 className="game-over-dialogue"
             >
-                <p>Sinu mäng on lõppenud. Sisesta võistleja nimi:</p>
+                <p>Sinu mäng on lõppenud. Sisesta mängija nimi:</p>
 
                 <div className="inputName">
                     <input type="text" className="input-box-name" required/>
@@ -179,7 +196,11 @@ function Game() {
                 </div>
                 <Button className="sisesta-button-na" label="Sisesta" onClick={handleCompetitorNameSubmit}/>
             </Dialog>
-            <Button onClick={sendInput} label="Sisesta" className="sisesta-button-n"/>
+            <div className="row mt-3">
+                <div className="col">
+                    <Button onClick={sendInput} className="sisesta-button-n">Sisesta</Button>
+                </div>
+            </div>
             <StartOverButton/>
         </div>
     );

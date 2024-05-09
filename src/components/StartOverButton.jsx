@@ -5,7 +5,7 @@ import '../css/Game.css';
 const StartOverButton = () => {
     return (
         <Link to="/">
-            <button className="return-button">Alusta uuesti</button>
+            <button className="return-button">Tagasi algusesse</button>
         </Link>
     );
 };

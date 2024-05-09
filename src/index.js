@@ -9,7 +9,12 @@ import Homepage from "./js/Homepage";
 import Game from "./js/Game";
 import Scoreboard from "./js/Scoreboard";
 import GameOver from "./js/GameOver";
+import Instructions from "./js/Instructions"
 import 'primeicons/primeicons.css';
+import 'react-bootstrap';
+import 'bootstrap';
+
+
 
 const router = createBrowserRouter([
     {
@@ -27,6 +32,10 @@ const router = createBrowserRouter([
     {
         path: "/gameover",
         element: <GameOver />,
+    },
+    {
+        path: "/instructions",
+        element: <Instructions />
     },
 ]);
 
