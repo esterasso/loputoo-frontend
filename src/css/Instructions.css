@@ -1,0 +1,23 @@
+.instructions-container {
+    max-width: 90%;
+    background-color: #b7a8ea;
+    position: relative;
+    margin: 5% auto;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 26px;
+    overflow: auto;
+}
+
+.list {
+    padding-right: 10px;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.listItem {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
