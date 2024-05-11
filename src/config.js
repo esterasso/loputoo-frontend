@@ -1,1 +1,1 @@
-export const BASE_URL = 'http://localhost:8080';
+export const BASE_URL = 'https://anagramm-backend-3f04e0ca4cb2.herokuapp.com';

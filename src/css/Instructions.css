@@ -2,11 +2,15 @@
     max-width: 90%;
     background-color: #b7a8ea;
     position: relative;
-    margin: 5% auto;
+    margin: 5%;
     border-radius: 15px;
-    text-align: center;
+    text-align: left;
     font-size: 26px;
     overflow: auto;
+}
+
+.instructions-container h3 {
+    text-align: center;
 }
 
 .list {
