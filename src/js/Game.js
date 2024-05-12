@@ -76,7 +76,7 @@ function Game() {
             .then((response) => response.json())
             .then((data) => {
                 setWord(data.anagram);
-                document.querySelector('.input-box').value = '';
+                setInputValue('');
             })
             .catch((error) => {
                 console.error('Error fetching data:', error);
