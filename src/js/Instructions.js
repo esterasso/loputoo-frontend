@@ -25,7 +25,7 @@ const Instructions = () => {
                     <li className="listItem">Väljamõeldud anagrammi peab sisestama tekstikasti ning vajutama “Sisesta”
                         nuppu või klaviatuuril ENTERit.
                     </li>
-                    <li className="listItem">Kui sisestatud anagramm on korrektne, saab mängija 10 punkti ning 10
+                    <li className="listItem">Kui sisestatud anagramm on korrektne, saab mängija ühesõnalise anagrammi puhul 20 punkti ning kahesõnalise anagrammi puhul 10 punkti. Lisaks annab iga õige vastus 10
                         sekundit lisaaega.
                     </li>
                     <li className="listItem">Mäng kestab kuni aeg saab otsa, mille järel peab mängija sisestama oma nime
