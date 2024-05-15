@@ -43,7 +43,7 @@ const Homepage = () => {
                 <h1>Anagrammimäng</h1>
                 <p>Lõbus mäng kõigile huvilistele!</p>
                 <div className="box">
-                    <h4>Vali mängukestus:</h4>
+                    <h4>Vali mängu kestus:</h4>
                     <div className="title_div">
                         <Button
                             label="1 min"
